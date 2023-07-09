@@ -1,0 +1,38 @@
+alias vi='vim'
+alias vim='nvim'
+
+alias be="bundle exec"
+alias less="less -F -X"
+alias tree='tree -Csh'
+alias gethead="curl -I $1"
+alias myip="curl http://ip.appspot.com"
+alias time_curl="curl -s -w '\nConnect %{time_connect}: Transfer %{time_starttransfer}: Total %{time_total}\n'"
+
+alias svd='svn diff --diff-cmd=diff | vim -R -'
+alias svdiff='svn diff --diff-cmd=svndiffwrap'
+alias svs='svn st'
+alias sva='svn add'
+alias svr='svn revert'
+alias svc='svn ci'
+alias svo='svn co'
+alias svu='svn up'
+alias svl='svn log | less'
+
+alias gitdiff='GIT_EXTERNAL_DIFF=gitdiffwrap git diff'
+
+alias xopen='xdg-open'
+alias gcal='gcalcli'
+alias ne='PATH=$(npm bin):$PATH'
+alias weather="curl 'wttr.in'"
+alias copy="xclip -selection clipboard"
+alias sudosaws="AWS_PROFILE=sudo saws"
+alias dewhitespace="tr -d ' \t\n\r\f' <"
+alias pass='gopass'
+alias cat='bat -p'
+alias aws2='/usr/local/bin/aws'
+alias utc='date -u +"%Y-%m-%dT%H:%M:%S%Z"'
+alias gotop='gotop -c vice'
+alias aws-shell='PYENV_VERSION=3.7.9 aws-shell'
+alias yank='yank-cli -- xsel -b'
+alias hist='history -i -D'
+alias fdfind='fd'

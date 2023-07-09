@@ -1,0 +1,43 @@
+Config { font = "xft:Bitstream Vera Sans Mono:size=7:antialias=true"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = TopW L 100
+       , lowerOnStart = True
+       , commands = [ Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run Weather "KSFO" [
+                      "-t", "<tempC>C, <skyCondition>, RH <rh>%",
+                      "-L", "15", "-H", "25",
+                      "--normal", "green", "--high", "red", "--low", "lightblue"
+                    ] 36000
+                    , Run DynNetwork [
+                      "-t", "<rx>KB|<tx>KB",
+                      "-L", "0", "-H", "32",
+                      "--normal", "green", "--high", "red"
+                    ] 10
+                    , Run Com "sh" [
+                      "-c", "$HOME/.scripts/wireless wlp58s0"
+                    ] "wireless" 10
+                    , Run Battery [
+                      "-t", "<acstatus>: <left>% - <timeleft>",
+                      "-H", "75", "-h", "green",
+                      "-L", "25", "-l", "red",
+                      "--",
+                      "-O", "AC",
+                      "-o", "Bat"
+                    ] 50
+                    , Run Memory [
+                      "-t", "Mem: <usedratio>%",
+                      "-L", "0", "-H", "50",
+                      "--normal", "green", "--high", "red"
+                    ] 10
+                    , Run Cpu [
+                      "-L", "0", "-H", "50",
+                      "--normal", "green", "--high", "red"
+                    ] 10
+                    , Run Com "sh" ["-c", "$HOME/.scripts/volume"] "volume" 1
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %KSFO% | %cpu% %memory% | %wireless% %dynnetwork% | %battery% | Vol: %volume% | <fc=#ee9a00>%date%</fc>"
+       }

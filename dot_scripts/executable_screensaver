@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+exec mplayer -shuffle -nosound -really-quiet \
+  -nolirc -nostop-xscreensaver -ss $(($RANDOM%5400)) -wid \
+  $XSCREENSAVER_WINDOW -fs -loop 0 -vo gl_nosw\
+  $HOME/screensavers/*

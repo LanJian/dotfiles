@@ -1,0 +1,76 @@
+snippet todo "todo" !w
+// TODO jackhxs `date +%Y-%m-%d`: ${1:msg}
+endsnippet
+
+snippet fixme "fixme" !w
+// FIXME jackhxs `date +%Y-%m-%d`: ${1:msg} 
+endsnippet
+
+snippet der "derive" !b
+#[derive(Debug, Clone, Copy, Default, Eq, PartialEq$0)]
+endsnippet
+
+snippet disp "display" !b
+use std::fmt;
+
+impl fmt::Display for ${1:STRUCT} {
+	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+		write!(f, "({}, {})", self.x, self.y)$0
+	}
+}
+endsnippet
+
+snippet fromstr "from str" !b
+use std::str::FromStr;
+
+impl FromStr for ${1:TYPE} {
+	type Err = ${2:ERROR};
+
+	fn from_str(s: &str) -> Result<Self> {
+		//...
+	}
+}
+
+endsnippet
+
+snippet cerr "crate error import" !b
+use crate::error::{${1:ERROR}, Result};
+endsnippet
+
+snippet cons "default constructor" !b
+pub fn new() -> Self {
+	$0
+}
+endsnippet
+
+snippet intoerr "From Error" !b
+impl From<${1:ERROR}> for ${2:ERROR_ENUM} {
+	fn from(err: ${3:$1}) -> ${4:$2} {
+		${5:$2}::${6:ENUM_VAL}(err)
+	}
+}
+endsnippet
+
+snippet moddoc "module-level documentation" !b
+//! ${1:[short sentence explaining what it is]}
+//!
+//! ${2:[more detailed explanation]}
+//!
+//! # Examples
+//! \`\`\`
+//! use ${3:mymodule};
+//! ${4:...}
+//! \`\`\`$0
+endsnippet
+
+snippet doc "function/struct-level documentation" !b
+/// ${1:[short sentence explaining what it is]}
+///
+/// ${2:[more detailed explanation]}
+///
+/// # Examples
+/// \`\`\`
+/// use ${3:mymodule};
+/// ${4:...}
+/// \`\`\`$0
+endsnippet

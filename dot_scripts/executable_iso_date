@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+#date -u +"%Y-%m-%d" | xdotool type --clearmodifiers --file -
+sleep 0.2
+xdotool type --clearmodifiers "$(date -u +"%Y-%m-%d")"
+#xdotool type --clearmodifiers "hello world"

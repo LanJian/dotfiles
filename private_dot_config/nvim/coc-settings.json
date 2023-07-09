@@ -1,0 +1,85 @@
+{
+  "suggest.floatConfig": {
+    "border": true,
+    "rounded": true,
+    "borderhighlight": "FloatBorder"
+  },
+  "hover.floatConfig": {
+    "border": true,
+    "rounded": true,
+    "borderhighlight": "FloatBorder"
+  },
+  "signature.floatConfig": {
+    "border": true,
+    "rounded": true,
+    "borderhighlight": "FloatBorder"
+  },
+  "diagnostic.floatConfig": {
+    "border": true,
+    "rounded": true,
+    "borderhighlight": "FloatBorder"
+  },
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
+    },
+    "graphql": {
+      "command": "graphql-lsp",
+      "args": ["server", "-m", "stream"],
+      "filetypes": ["graphql"]
+    }
+  },
+  "codeLens.enable": true,
+  "codeLens.position": "eol",
+  "suggest.selection": "first",
+  "suggest.noselect": true,
+  "suggest.maxCompleteItemCount": 20,
+  "suggest.labelMaxLength": 40,
+  "rust-analyzer.lens.enable": true,
+  "rust-analyzer.lens.implementations.enable": true,
+  "rust-analyzer.lens.references.adt.enable": true,
+  "rust-analyzer.lens.references.enumVariant.enable": true,
+  "rust-analyzer.lens.references.method.enable": true,
+  "rust-analyzer.lens.references.trait.enable": true,
+  "rust-analyzer.highlightRelated.breakPoints.enable": true,
+  "rust-analyzer.highlightRelated.exitPoints.enable": true,
+  "rust-analyzer.highlightRelated.references.enable": true,
+  "diagnostic.errorSign": "🮉",
+  "diagnostic.warningSign": "🮉",
+  "diagnostic.hintSign": "🮉",
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": true,
+  "diagnostic.virtualTextPrefix": " ◇◈◆  ",
+  "python.analysis.useLibraryCodeForTypes": true,
+  "highlight.colorNames.enable": false,
+  "yank.highlight.enable": false,
+  "suggest.completionItemKindLabels": {
+    "class": "\uf0e8",
+    "color": "",
+    "constant": "",
+    "constructor": "",
+    "enum": "",
+    "enumMember": "",
+    "event": "",
+    "field": "\uf9be",
+    "file": "",
+    "folder": "",
+    "function": "",
+    "interface": "",
+    "keyword": "",
+    "method": "",
+    "module": "",
+    "operator": "",
+    "property": "\ue624",
+    "reference": "",
+    "snippet": "",
+    "struct": "פּ",
+    "text": "",
+    "unit": "塞",
+    "value": "",
+    "variable": ""
+  },
+  "yank.enableCompletion": false
+}

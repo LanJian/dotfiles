@@ -1,0 +1,29 @@
+#!/bin/sh
+
+line=$(amixer -M get Master | tail -1)
+pct=$(ruby -e "puts '$line'.match(/.*\[(\d*)%\] \[(.*)\]/)[1].to_f/10")
+state=$(ruby -e "puts '$line'.match(/.*(off).*/)&.[]1")
+vol=${pct%.*}
+
+case $vol in
+  0)  bar='[----------]' ;;
+  1)  bar='[#---------]' ;;
+  2)  bar='[##--------]' ;;
+  3)  bar='[###-------]' ;;
+  4)  bar='[####------]' ;;
+  5)  bar='[#####-----]' ;;
+  6)  bar='[######----]' ;;
+  7)  bar='[#######---]' ;;
+  8)  bar='[########--]' ;;
+  9)  bar='[#########-]' ;;
+  10) bar='[##########]' ;;
+  *)  bar='[----!!----]' ;;
+esac
+
+if [ "$state" = "off" ]; then
+  echo "MMM [---MUTE---]"
+else
+  echo "`echo "$pct*10/1" | bc`% $bar"
+fi
+
+exit 0

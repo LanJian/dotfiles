@@ -1,0 +1,24 @@
+% navi, cheatsheets
+	 
+# Browse for navi cheatsheet repos
+navi repo browse
+
+# Edit navi local cheatsheets
+vim "$(navi info cheats-path)/<cheatsheet-name>.cheat"
+
+$ cheatsheet-name: ls "$(navi info cheats-path)"/*.cheat | xargs basename -s .cheat -a
+
+
+% navi, config
+
+# Edit navi config file
+vim "$(navi info config-path)"
+
+
+% navi, 3rd-party
+
+# Search navi using tldr
+navi --tldr "<query>"
+
+# Search navi using cheatsh
+navi --cheatsh "<query>"

@@ -1,0 +1,14 @@
+sanitise tridactyllocal tridactylsync
+
+colors jackhxs
+
+bind ,<Space> nohlsearch
+bind ; fillcmdline_notrail
+bind <C-j> tabnext_gt
+bind <C-k> tabprev
+
+alias downloads tabopen about:downloads
+alias settings tabopen about:preferences
+alias preferences tabopen about:preferences
+
+set searchurls.go https://go/

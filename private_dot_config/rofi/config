@@ -1,0 +1,11 @@
+rofi.color-enabled: true
+rofi.color-window: argb:e50a0e13, #cb07b0, #00870075
+rofi.color-normal: #101010, #fff9fe, #181818, #6833ff, #ffffff
+rofi.color-active: #101010, #cb07b0, #181818, #6833ff, #ffffff
+rofi.color-urgent: #101010, #f3843d, #181818, #6833ff, #ffc39c
+rofi.font:xos4 Terminess Powerline 16
+rofi.bw: 3
+rofi.width: -80
+rofi.scroll-method: 1
+rofi.hide-scrollbar: true
+rofi.theme: jackhxs

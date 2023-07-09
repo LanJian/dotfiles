@@ -1,0 +1,34 @@
+% jackhxs
+
+# Edit zshrc
+vim ~/.zshrc
+
+# Edit zshenv
+vim ~/.zshenv
+
+# Edit aliases
+vim ~/.aliases
+
+# Edit vimrc
+vim ~/.vimrc
+
+# Edit ssh config
+vim ~/.ssh/config
+
+% jackhxs, aws
+
+# Tail AWS Lambda logs from Cloudwatch
+awslogs get <lambda_log_group> --watch -G -S
+
+$ lambda_log_group: awslogs groups | grep lambda
+
+# Tail AWS ECS logs from Cloudwatch
+awslogs get <ecs_log_group> --watch -G -S
+
+$ ecs_log_group: awslogs groups | grep ecs
+
+# Generate an UTC timestamp is an email-safe ISO format
+date -u +"%Y%m%dT%H%M%SZ"
+
+# Generate date in ISO format
+date -u +"%Y-%m-%d"

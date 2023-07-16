@@ -20,7 +20,6 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/lib/pkgconfig:/usr/X11/lib/
 export GOPATH=$HOME/.go
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude ".git"'
 
-. "$HOME/.cargo/env"
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH

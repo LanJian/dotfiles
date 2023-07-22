@@ -25,3 +25,4 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 
 export HISTTIMEFORMAT="%F %T "
+export PINENTRY_USER_DATA="USE_GNOME3"

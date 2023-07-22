@@ -11,6 +11,7 @@ let g:coc_global_extensions = [
   \'coc-yaml',
   \'coc-spell-checker',
   \'coc-css',
+  \'coc-diagnostic',
 \]
 
 " Some servers have issues with backup files, see #649.

@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+tmux new-session -s "dev" -n "code" -d
+tmux split-window -v -l "20%"
+tmux split-window -h
+tmux select-pane -t 1
+tmux split-window -h
+tmux new-window -n "terminal"
+tmux select-window -t "code"
+tmux attach-session -t "dev" -d

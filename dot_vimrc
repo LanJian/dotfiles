@@ -59,7 +59,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'psf/black', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/vim-markdown'
-
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " Colorschemes
 Plug 'chriskempson/vim-tomorrow-theme'
@@ -192,6 +192,12 @@ let g:startify_fortune_use_unicode = 1
 " fugitive
 nnoremap <leader>gh :GBrowse!<cr>
 vnoremap <leader>gh :GBrowse!<cr>
+
+" markdown-preview
+function OpenMarkdownPreview (url)
+  execute "silent ! firefox --new-window " . a:url
+endfunction
+let g:mkdp_browserfunc = "OpenMarkdownPreview"
 
 lua << EOF
 require("plugins/bufferline")

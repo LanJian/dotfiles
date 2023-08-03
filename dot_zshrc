@@ -155,6 +155,9 @@ fi
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
 bindkey -v
+bindkey -M vicmd ^X^E edit-command-line
+bindkey -M viins ^X^E edit-command-line
+bindkey -M viins ^P up-history
 
 # for some reason, this needs to happen after the vi mode invocation above
 if type "navi" > /dev/null; then

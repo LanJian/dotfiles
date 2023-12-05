@@ -60,6 +60,7 @@ Plug 'psf/black', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'petobens/poet-v'
 
 " Colorschemes
 Plug 'chriskempson/vim-tomorrow-theme'
@@ -155,7 +156,7 @@ au BufNewFile,BufRead *.java nnoremap <silent> <cr> :JavaSearchContext<cr>
 au BufNewFile,BufRead *.java nnoremap <silent> <leader>c :JavaCorrect<cr>
 let g:EclimCompletionMethod = 'omnifunc'
 
-" ale 
+" ale
 let g:ale_enabled = 0
 
 " coc
@@ -213,6 +214,20 @@ EOF
 " vim-sneak
 let g:sneak#label = 1
 
+" splitjoin
+let g:splitjoin_split_mapping = ''
+let g:splitjoin_join_mapping = ''
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
+
+let g:splitjoin_normalize_whitespace = 1
+let g:splitjoin_curly_brace_padding = 0
+let g:splitjoin_trailing_comma = 1
+let g:splitjoin_ruby_curly_braces = 0
+let g:splitjoin_ruby_hanging_args = 0
+let g:splitjoin_ruby_options_as_arguments = 1
+let g:splitjoin_python_brackets_on_separate_lines = 1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " end plugin settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -248,6 +263,7 @@ set backupdir=~/.vim/backup
 set laststatus=2
 set synmaxcol=200
 set tabpagemax=100
+set scrolloff=5
 
 set guioptions-=m
 set guioptions-=T
@@ -359,6 +375,9 @@ if has("autocmd")
   autocmd BufEnter Dockerfile.* :setlocal filetype=dockerfile
 
   autocmd FileType scss setl iskeyword+=@-@
+
+  " remove trailing whitespace
+  autocmd BufWritePre * :%s/\s\+$//e
 else
 
   set autoindent    " always set autoindenting on

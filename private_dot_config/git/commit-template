@@ -1,8 +1,8 @@
-# ---------------------------------------------------------------------
-# Header - type(scope): brief description
-# ---------------------------------------------------------------------
-#    * fix              A bug fix - SemVer PATCH
-#    * feat             A new feature - SemVer MINOR
+# ----------------------------------------------------------
+# Header - type(scope): Brief description
+# ----------------------------------------------------------
+#    * feat             A new feature - SemVar PATCH
+#    * fix              A bug fix - SemVar MINOR
 #    * docs             Change to documentation only
 #    * style            Change to style (whitespace, etc.)
 #    * refactor         Change not related to a bug or feat
@@ -11,25 +11,22 @@
 #    * build            Change to build system
 #    * ci               Change to CI pipeline/workflow
 #    * chore            General tooling/config/min refactor
-# ---------------------------------------------------------------------
+#    * revert           Revert (specify Refs: in footer)
+# Append ! for BREAKING CHANGE like `feat!: ...`
+# ----------------------------------------------------------
 
 
-# ---------------------------------------------------------------------
+# ----------------------------------------------------------
 # Body - More description, if necessary
-# ---------------------------------------------------------------------
-#    * Motivation behind changes, more detail into how functionality
-#      might be affected, etc.
-#    * BREAKING CHANGE: a commit that has the text BREAKING CHANGE: at
-#      the beginning of its body section introduces a breaking API
-#      change (correlating with SemVer MAJOR). A breaking change can be
-#      part of commits of any type.
-# ---------------------------------------------------------------------
+# ----------------------------------------------------------
+#    * Motivation behind changes, more detail into how
+#      functionality might be affected, etc.
+# ----------------------------------------------------------
 
 
-# ---------------------------------------------------------------------
+# ----------------------------------------------------------
 # Footer - Associated issues, PRs, etc.
-# ---------------------------------------------------------------------
-#    * Footer: value
-#    * Example - Resolves: Issue #20
-# ---------------------------------------------------------------------
-
+# ----------------------------------------------------------
+#    * Ex: Resolves Issue #207, see PR #15, etc.
+#    * BREAKING CHANGE: description can be specified
+# ----------------------------------------------------------

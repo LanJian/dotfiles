@@ -40,7 +40,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to the command execution time stamp shown 
+# Uncomment following line if you want to the command execution time stamp shown
 # in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
@@ -149,7 +149,7 @@ bindkey '^ ' autosuggest-accept
 complete -C '/usr/local/bin/aws_completer' aws
 
 if type "keychain" > /dev/null; then
-  eval `keychain --quiet --eval --agents ssh id_ed25519`
+  eval `keychain --quiet --eval --agents ssh id_ed25519 id_ed25519.apocrypha`
 fi
 
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"

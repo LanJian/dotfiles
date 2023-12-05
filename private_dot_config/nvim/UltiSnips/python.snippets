@@ -20,6 +20,13 @@ def ${1:FIXTURE_NAME}($0) -> ${2:None}:
 
 endsnippet
 
+snippet "async fix" "asyncio fixture function" !b
+@pytest_asyncio.fixture
+async def ${1:FIXTURE_NAME}($0) -> ${2:None}:
+	${3:pass}
+
+endsnippet
+
 snippet before_each "before_each fixture" !b
 @pytest.fixture(autouse=True)
 def before_each(mocker: pytest_mock.MockerFixture) -> None:$0
@@ -109,7 +116,7 @@ snippet dnc "do not commit" !w
 endsnippet
 
 snippet fixme "fixme" !w
-# FIXME jackhxs `date +%Y-%m-%d`: ${1:msg} 
+# FIXME jackhxs `date +%Y-%m-%d`: ${1:msg}
 endsnippet
 
 snippet rip "random ip" !w

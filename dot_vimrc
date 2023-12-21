@@ -95,6 +95,7 @@ Plug 'bazelbuild/vim-bazel'
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'cespare/vim-toml'
 Plug 'NoahTheDuke/vim-just'
+Plug 'leafOfTree/vim-svelte-plugin'
 
 " Syntactic sugar
 Plug 'Twinside/vim-haskellConceal'

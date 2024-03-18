@@ -119,6 +119,10 @@ snippet fixme "fixme" !w
 # FIXME jackhxs `date +%Y-%m-%d`: ${1:msg}
 endsnippet
 
+snippet ic
+__import__("icecream").ic(${1})
+endsnippet
+
 snippet rip "random ip" !w
 `!p if not snip.c: snip.rv = random_ip()`$0
 endsnippet

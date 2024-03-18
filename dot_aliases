@@ -26,7 +26,7 @@ alias gitdiff='GIT_EXTERNAL_DIFF=gitdiffwrap git diff'
 alias xopen='xdg-open'
 alias gcal='gcalcli'
 alias ne='PATH=$(npm bin):$PATH'
-alias weather="curl 'wttr.in'"
+alias weather="curl 'wttr.in?m'"
 alias copy="xclip -selection clipboard"
 alias sudosaws="AWS_PROFILE=sudo saws"
 alias dewhitespace="tr -d ' \t\n\r\f' <"

@@ -1,7 +1,7 @@
 alias vi='vim'
 alias vim='nvim'
 alias ls='exa'
-alias la='ls -laah'
+alias la='ls -laagh'
 alias lt='ls -lhT --group-directories-first'
 
 alias be="bundle exec"

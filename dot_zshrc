@@ -150,9 +150,8 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 if type "keychain" > /dev/null; then
   keys=""
-  [[ -s "~/.ssh/id_ed25519" ]] && keys+="id_ed25519 "
-  [[ -s "~/.ssh/id_ed25519.apocrypha" ]] && keys+="id_ed25519.apocrypha "
-  eval `keychain --quiet --eval --agents ssh ${keys}`
+  [[ -s "$HOME/.ssh/id_ed25519" ]] && eval `keychain --quiet --eval --agents ssh id_ed25519`
+  [[ -s "$HOME/.ssh/id_ed25519.apocrypha" ]] && eval `keychain --quiet --eval --agents ssh id_ed25519.apocrypha`
 fi
 
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"

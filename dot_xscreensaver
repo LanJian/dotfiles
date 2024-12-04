@@ -14,7 +14,7 @@ timestamp:	True
 splash:		True
 splashDuration:	0:00:05
 demoCommand:	xscreensaver-demo
-prefsCommand:	
+prefsCommand:
 nice:		10
 memoryLimit:	0
 fade:		False
@@ -32,22 +32,23 @@ dpmsOff:	0:30:00
 grabDesktopImages:  False
 grabVideoFrames:    False
 chooseRandomImages: False
-imageDirectory:	
+imageDirectory:
 
 mode:		one
 selected:	0
 
 textMode:	url
 textLiteral:	XScreenSaver
-textFile:	
+textFile:
 textProgram:	fortune
 textURL:	https://feeds.feedburner.com/ubuntu-news
 
 programs:								      \
-		   "My Movies" 	mplayer -shuffle -nosound -really-quiet	      \
-				  -nolirc -nostop-xscreensaver -wid	      \
-				  $XSCREENSAVER_WINDOW -fs		      \
-				  $HOME/screensavers/*			    \n\
+        "My Movies" cvlc --loop -Z --fullscreen  \
+          --ignore-config --no-video-title-show  \
+          --no-interact --no-disable-screensaver \
+          --drawable-xid $XSCREENSAVER_WINDOW    \
+          --no-audio "$HOME/screensavers"      \n\
 				maze -root				    \n\
 - GL: 				superquadrics -root			    \n\
 				attraction -root			    \n\

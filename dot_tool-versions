@@ -4,3 +4,4 @@ ruby 3.2.1
 golang 1.22.1
 pulumi 3.111.1
 awscli 2.15.31
+nim 2.2.0

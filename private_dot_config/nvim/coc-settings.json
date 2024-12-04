@@ -46,6 +46,12 @@
   "rust-analyzer.highlightRelated.breakPoints.enable": true,
   "rust-analyzer.highlightRelated.exitPoints.enable": true,
   "rust-analyzer.highlightRelated.references.enable": true,
+  "yaml.schemas": {
+    "kubernetes": [
+      "/home/jackhxs/code/homelab/**/*.yaml",
+      "/home/jackhxs/code/homelab-private/**/*.yaml"
+    ]
+  },
   "diagnostic.errorSign": "🮉",
   "diagnostic.warningSign": "🮉",
   "diagnostic.hintSign": "🮉",

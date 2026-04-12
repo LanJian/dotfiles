@@ -6,6 +6,7 @@ bind ,<Space> nohlsearch
 bind ; fillcmdline_notrail
 bind <C-j> tabnext_gt
 bind <C-k> tabprev
+bind --mode=browser <C-2> tab #
 
 alias downloads tabopen about:downloads
 alias settings tabopen about:preferences

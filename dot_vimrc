@@ -115,7 +115,7 @@ colorscheme nightfox
 
 let mapleader = ","
 
-let g:python3_host_prog="/home/jackhxs/.asdf/shims/python3"
+let g:python3_host_prog="/home/jackhxs/.local/share/mise/installs/python/3.11.6/bin/python3"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " plugin settings
@@ -226,6 +226,9 @@ let g:splitjoin_python_brackets_on_separate_lines = 1
 
 " black
 let g:black_preview = 1
+
+" rust
+let g:rustfmt_autosave = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " end plugin settings

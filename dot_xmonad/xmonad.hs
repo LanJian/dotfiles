@@ -88,6 +88,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList
         , ((modm .|. shiftMask, xK_backslash), spawn "$HOME/.scripts/passmenu login")
         , ((modm .|. shiftMask, xK_s), spawn "$HOME/.scripts/screenshot")
         , ((modm .|. shiftMask, xK_t), spawn "$HOME/.scripts/iso_date")
+        , ((modm .|. shiftMask, xK_l), spawn "$HOME/.scripts/md_link")
         , ((modm, xK_a), currentTopicAction myTopicConfig)
         , ((modm, xK_g), promptedGoto)
         , ((modm .|. shiftMask, xK_g), promptedGoto)

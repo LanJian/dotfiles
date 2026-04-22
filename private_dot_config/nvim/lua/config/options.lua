@@ -1,0 +1,43 @@
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
+--vim.g.python3_host_prog = vim.fn.expand("/home/jackhxs/.local/share/mise/installs/python/3.11.6/bin/python3")
+
+vim.opt.autoindent = true
+vim.opt.background = "dark"
+vim.opt.backspace = { "indent", "eol", "start" }
+vim.opt.backup = true
+vim.opt.backupdir = vim.fn.expand("~/.vim/backup")
+vim.opt.clipboard:append("unnamedplus")
+vim.opt.colorcolumn = "80"
+vim.opt.conceallevel = 2
+vim.opt.cursorline = true
+vim.opt.expandtab = true
+vim.opt.gdefault = true
+vim.opt.history = 50
+vim.opt.hlsearch = true
+vim.opt.ignorecase = true
+vim.opt.incsearch = true
+vim.opt.laststatus = 2
+vim.opt.list = false
+vim.opt.listchars = { tab = "▸ ", eol = "¬", extends = "❯", precedes = "❮" }
+vim.opt.mouse = "a"
+vim.opt.number = true
+vim.opt.ruler = true
+vim.opt.scrolloff = 5
+vim.opt.shiftwidth = 2
+vim.opt.showcmd = true
+vim.opt.signcolumn = "yes"
+vim.opt.smartcase = true
+vim.opt.smartindent = true
+vim.opt.smarttab = true
+vim.opt.synmaxcol = 200
+vim.opt.tabpagemax = 100
+vim.opt.termguicolors = true
+vim.opt.textwidth = 0
+vim.opt.ts = 2
+vim.opt.undodir = vim.fn.expand("~/.vim/undodir")
+vim.opt.undofile = true
+vim.opt.undolevels = 1000
+vim.opt.undoreload = 10000
+vim.opt.updatetime = 300
+vim.opt.wrapmargin = 0

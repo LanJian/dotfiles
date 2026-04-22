@@ -1,4 +1,4 @@
-require('lualine').setup {
+local opts = {
   options = {
     theme = 'nightfox',
     component_separators = { left = '',  right = ''},
@@ -20,4 +20,10 @@ require('lualine').setup {
       },
     },
   },
+}
+
+return {
+  'nvim-lualine/lualine.nvim',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  opts = opts,
 }

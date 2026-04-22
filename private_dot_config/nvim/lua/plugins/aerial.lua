@@ -1,11 +1,20 @@
-require('aerial').setup({
-  -- optionally use on_attach to set keymaps when aerial has attached to a buffer
-  on_attach = function(bufnr)
-    -- Jump forwards/backwards with '{' and '}'
-    vim.keymap.set('n', '{', '<cmd>AerialPrev<CR>', {buffer = bufnr})
-    vim.keymap.set('n', '}', '<cmd>AerialNext<CR>', {buffer = bufnr})
-  end,
-})
--- You probably also want to set a keymap to toggle aerial
-vim.keymap.set('n', '<leader>aa', '<cmd>AerialToggle!<CR>')
-vim.keymap.set('n', '<leader>j', '<cmd>AerialNavToggle<CR>')
+local function on_attach(bufnr)
+  vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+  vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+end
+
+local opts = {
+  on_attach = on_attach,
+}
+
+local keys = {
+  { "<leader>aa", "<cmd>AerialToggle!<cr>", desc = "Toggle aerial" },
+  { "<leader>j", "<cmd>AerialNavToggle<cr>", desc = "Aerial nav" },
+  { "<F8>", "<cmd>AerialToggle<cr>", desc = "Toggle code outline" },
+}
+
+return {
+  "stevearc/aerial.nvim",
+  opts = opts,
+  keys = keys,
+}

@@ -1,11 +1,44 @@
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "ruby", "rust", "python", "yaml" },
+local parsers = {
+  "bash",
+  "c",
+  "css",
+  "diff",
+  "dockerfile",
+  "gitcommit",
+  "go",
+  "graphql",
+  "haskell",
+  "hcl",
+  "html",
+  "java",
+  "javascript",
+  "json",
+  "jsonnet",
+  "just",
+  "lua",
+  "markdown",
+  "markdown_inline",
+  "python",
+  "regex",
+  "ruby",
+  "rust",
+  "scss",
+  "svelte",
+  "terraform",
+  "toml",
+  "typescript",
+  "vim",
+  "vimdoc",
+  "yaml",
+}
 
-  highlight = {
-    enable = true,
-  },
+local function config()
+  require("nvim-treesitter").install(parsers)
+end
 
-  indent = {
-    enable = true,
-  },
+return {
+  "nvim-treesitter/nvim-treesitter",
+  lazy = false,
+  build = ":TSUpdate",
+  config = config,
 }

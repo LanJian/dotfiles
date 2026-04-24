@@ -22,6 +22,7 @@ vim.opt.list = false
 vim.opt.listchars = { tab = "▸ ", eol = "¬", extends = "❯", precedes = "❮" }
 vim.opt.mouse = "a"
 vim.opt.number = true
+vim.opt.pumheight = 20
 vim.opt.ruler = true
 vim.opt.scrolloff = 5
 vim.opt.shiftwidth = 2

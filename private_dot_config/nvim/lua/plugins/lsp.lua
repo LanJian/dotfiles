@@ -2,6 +2,9 @@ local servers = {
   rust_analyzer = {
     settings = {
       ["rust-analyzer"] = {
+        check = {
+          command = "clippy",
+        },
         lens = {
           enable = true,
           implementations = { enable = true },

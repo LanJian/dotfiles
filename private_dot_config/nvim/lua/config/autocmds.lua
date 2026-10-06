@@ -87,7 +87,6 @@ autocmd("LspAttach", {
     map("n", "gy", function() require("telescope.builtin").lsp_type_definitions() end, "Go to type definition")
     map("n", "gi", function() require("telescope.builtin").lsp_implementations() end, "Go to implementation")
     map("n", "gr", function() require("telescope.builtin").lsp_references() end, "Go to references")
-    map("n", "K", function() vim.lsp.buf.hover({ border = "rounded" }) end, "Hover documentation")
     map("n", "<leader>rn", function() vim.lsp.buf.rename() end, "Rename symbol")
     map({ "n", "x" }, "<leader>f", function() vim.lsp.buf.format() end, "Format")
     map({ "n", "x" }, "<leader>a", function() vim.lsp.buf.code_action() end, "Code action")
@@ -95,6 +94,10 @@ autocmd("LspAttach", {
     map("n", "<leader>cl", function() vim.lsp.codelens.run() end, "Code lens")
     map("n", "[g", function() vim.diagnostic.goto_prev() end, "Previous diagnostic")
     map("n", "]g", function() vim.diagnostic.goto_next() end, "Next diagnostic")
+    map("n", "K", function()
+      vim.b[ev.buf].lsp_hover_active = true
+      vim.lsp.buf.hover({ border = "rounded" })
+    end, "Hover documentation")
   end,
 })
 
@@ -115,5 +118,23 @@ autocmd("LspAttach", {
         callback = function() vim.lsp.buf.clear_references() end,
       })
     end
+  end,
+})
+
+autocmd("LspAttach", {
+  group = augroup("jackhxs_lsp_diagnostic_float", { clear = true }),
+  callback = function(ev)
+    local diag_group = augroup("LspDiagnosticFloat_" .. ev.buf, { clear = true })
+    autocmd("CursorHold", {
+      group = diag_group,
+      buffer = ev.buf,
+      callback = function()
+        if vim.b.lsp_hover_active then
+          vim.b.lsp_hover_active = false
+          return
+        end
+        vim.diagnostic.open_float(nil, { focusable = false })
+      end,
+    })
   end,
 })

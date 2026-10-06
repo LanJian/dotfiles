@@ -30,6 +30,9 @@ map("i", "<F5>", '<C-R>=strftime("%Y-%m-%d")<CR>', { desc = "Insert date" })
 map("", "Q", "gq", { desc = "Format with gq" })
 map("n", "<leader>=", "gg=G<C-o>", { desc = "Re-indent file" })
 
+-- Disable yanking replaced text
+map("x", "p", '"_dP')
+
 -- Custom commands
 vim.api.nvim_create_user_command("DiffOrig", function()
   vim.cmd("vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis")
